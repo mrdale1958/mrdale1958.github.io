@@ -1,0 +1,42 @@
+/* styles.css */
+
+/* Styles for documents/jaliscohiostoris.html */
+h1 {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Styles for index.html */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    color: #333;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
