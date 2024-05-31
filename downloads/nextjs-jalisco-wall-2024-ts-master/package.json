@@ -1,0 +1,42 @@
+{
+  "name": "nextjs-jalisco-wall-2024-ts",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "kioskstart": "concurrently \"cross-env BROWSER=none yarn react-serve\" \"wait-on http://localhost:5000 && electron .\"",
+    "kioskbuild": "yarn react-build && yarn electron-build",
+    "electron-build": "electron-builder",
+    "react-build": "react-scripts build",
+    "electron": "electron .",
+    "electron-start": "node src/electron-wait-react",
+    "react-start": "BROWSER=none react-scripts start",
+    "react-serve": "BROWSER=none serve -s build",
+    "react-build-start": "serve -s build -l 3000",
+    "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-pack": "build --em.main=build/electron.js",
+    "preelectron-pack": "yarn build"
+  },
+  "dependencies": {
+    "framer-motion": "^11.1.1",
+    "next": "^13.5.6",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "csvtojson": "^2.0.10",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  }
+}
